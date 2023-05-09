@@ -1,23 +1,17 @@
 import gpt
+import time
 
-def process(filename):
-    text=pdf2text.pdf2text(filename)
-    summarized_text=top_sent.top_sentences(text)
-    super_summarized_list=[]
-    count=0
-    for i in summarized_text:
-        count+=1
-        if count>3:
-            break
-        super_summarized_text=gpt.gpt_summarise(str(i[0]))
-        super_summarized_list.append(super_summarized_text)
-    print(super_summarized_list)
-    final_list=[]
-    for i in super_summarized_list:
+def process(topic_list):
+    data_list=[]
+    for topic in topic_list:
         dct={}
-        dct["Topic"]=i.split("Summary:")[0][6:]
-        dct["Summary"]=i.split("Summary:")[1].split("\n")
-        final_list.append(dct)
-    for i in final_list:
-        i["Topic"]=i["Topic"].replace("\n","").strip()
-    return(final_list)
+        text=gpt.gpt_summarise("I am giving you a topic. return a topic and information (elaborate and in depth) in ten points. strictly follow the syntax'Topic : topic goes here , Summary : summary sentence 1, summary sentence 2,summary sentence 3,summary sentence 4,summary sentence 5,summary sentence 6, summary sentence 7,summary sentence 8,summary sentence 9,summary sentence 10'. make the points ppt friendly.",topic)
+        dct["Topic"]=text.split("Summary:")[0][6:]
+        dct["Summary"]=text.split("Summary:")[1].split("\n")
+        code=gpt.gpt_summarise("I am giving you a topic. return a short sample python code snippet for the given topic. do not write anything else.",topic)
+        code=code.replace("```python","```")
+        code=(code.split("```"))[1].split("```")[0]
+        dct["Code"]=code
+        data_list.append(dct)
+        time.sleep(55)
+    return data_list
