@@ -55,11 +55,11 @@ label.grid(row=1, column=0, pady=(20,5),padx=20,sticky="news")
 
 # Create a button widget that triggers the select_file() function when clicked
 ent = tk.Entry(window, font=('Arial', 24, 'bold'), fg='#f2f2f2', bg='#333333', borderwidth=0, relief='groove')
-ent.grid(row=2, column=0, pady=30,sticky="news",padx=20)
+ent.grid(row=2, column=0, pady=(30,15),sticky="news",padx=20)
 
 # Create an exit button widget
 exit_button = tk.Button(window, text='Exit', command=window.quit, font=('Arial', 12, 'bold'), fg='#f2f2f2', bg='#ff3333', padx=20, pady=10, borderwidth=0, relief='groove')
-exit_button.grid(row=3, column=0, pady=(5,20),padx=60,sticky="news")
+exit_button.grid(row=3, column=0, pady=(20,20),padx=60,sticky="news")
 
 # Add a hover effect to the exit button
 def on_enter_exit(e):
