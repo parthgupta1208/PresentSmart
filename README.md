@@ -3,7 +3,11 @@
 PresentSmart is a Python-based tool that utilizes AI to create on-point and in-depth PowerPoint presentations by generating notes. It is designed for both teachers and students, making it a versatile tool for educational purposes. The tool leverages the powerful GPT-3.5 Turbo engine for text generation, the Google Cloud Storage (GCS) for attaching related images, and the `pptx` library to generate PowerPoint files and add slides. Additionally, PresentSmart provides a user-friendly graphical user interface (GUI) implemented using the Tkinter library.
 
 ## Demo Video
+
+
 https://github.com/parthgupta1208/PresentSmart/assets/114602309/cd3348f7-95f3-458b-baef-d7d7597e381
+
+
 
 ## Features
 
