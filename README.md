@@ -22,7 +22,7 @@ https://github.com/parthgupta1208/PresentSmart/assets/114602309/e6d44d0b-b921-4a
 ## Installation
 
 1. Clone the PresentSmart repository to your local machine.
-```git clone https://github.com/parthgupta1208/PresentSmart.git```
+- ```git clone https://github.com/parthgupta1208/PresentSmart.git```
 
 
 2. Install the required dependencies using pip.
@@ -40,7 +40,7 @@ https://github.com/parthgupta1208/PresentSmart/assets/114602309/e6d44d0b-b921-4a
 ## Usage
 
 1. Launch the application by running the `gui.py` script.
-```python gui.py```
+- ```python gui.py```
 
 2. Use the graphical user interface to input your topics (comma-seperated).
 
