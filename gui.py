@@ -17,6 +17,7 @@ def exec(*args):
             l1=[_.strip() for _ in intext.split(",")]
         else:
             l1=[intext]
+        print(l1)
         x=pdf2final_list.process(l1)
         print("\n\n", x)
         text2ppt.presentate(x)
@@ -31,6 +32,7 @@ def exec(*args):
     exit_button.config(text='Exit')
     ent = tk.Entry(window, font=('Arial', 24, 'bold'), fg='#f2f2f2', bg='#333333', borderwidth=0, relief='groove')
     ent.grid(row=1, column=0, pady=30,sticky="news",padx=20)
+    ent.bind('<Return>', exec)
 
 
 # Create the Tkinter window

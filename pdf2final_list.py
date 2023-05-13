@@ -9,7 +9,7 @@ def process(topic_list):
         dct["Topic"]=text.split("Summary:")[0][6:]
         dct["Summary"]=text.split("Summary:")[1].split("\n")
         print(dct)
-        code=gpt.gpt_summarise("I am giving you a topic. return a short sample python code snippet for the given topic. do not write anything else.",topic)
+        code=gpt.gpt_summarise("I am giving you a topic. return a short sample code snippet for the given topic. do not write anything else.",topic)
         code=code.replace("```python","```")
         print(code)
         try:
@@ -18,5 +18,8 @@ def process(topic_list):
             pass
         dct["Code"]=code
         data_list.append(dct)
-        time.sleep(55)
+        if len(topic_list)<=1:
+            pass
+        else:
+            time.sleep(55)
     return data_list

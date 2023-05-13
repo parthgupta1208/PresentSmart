@@ -10,7 +10,7 @@ def presentate(defined_list):
 
     def add_slide(prs, layout, title, subtitle):
         slide = prs.slides.add_slide(layout)
-        slide.shapes.title.text = title
+        slide.shapes.title.text = title.strip()
         slide.placeholders[1].text=subtitle
         font = slide.shapes.title.text_frame.paragraphs[0].font
         font.name = 'Arial'
@@ -27,7 +27,7 @@ def presentate(defined_list):
     
     def add_slide1(prs, layout, title, subtitle):
         slide = prs.slides.add_slide(layout)
-        slide.shapes.title.text = title
+        slide.shapes.title.text = title.strip()
         slide.placeholders[1].text=subtitle
         font = slide.shapes.title.text_frame.paragraphs[0].font
         font.name = 'Arial'
