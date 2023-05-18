@@ -6,8 +6,7 @@ PresentSmart is a Python-based tool that utilizes AI to create on-point and in-d
 
 
 
-https://github.com/parthgupta1208/PresentSmart/assets/114602309/e6d44d0b-b921-4a30-933d-b999ddcd1779
-
+https://github.com/parthgupta1208/PresentSmart/assets/114602309/dc8a0ded-af9f-4ce3-a284-746798a917b2
 
 
 
