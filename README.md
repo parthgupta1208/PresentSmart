@@ -1,5 +1,11 @@
 # PresentSmart
 
+![GitHub repo size](https://img.shields.io/github/repo-size/parthgupta1208/PresentSmart)
+![GitHub contributors](https://img.shields.io/github/contributors/parthgupta1208/PresentSmart)
+![GitHub stars](https://img.shields.io/github/stars/parthgupta1208/PresentSmart?style=social)
+![GitHub forks](https://img.shields.io/github/forks/parthgupta1208/PresentSmart?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/parthgupta1208?style=social)
+
 PresentSmart is a Python-based tool that utilizes AI to create on-point and in-depth PowerPoint presentations by generating notes. It is designed for both teachers and students, making it a versatile tool for educational purposes. The tool leverages the powerful GPT-3.5 Turbo engine for text generation, the Google Cloud Storage (GCS) for attaching related images, and the pptx library to generate PowerPoint files and add slides. Additionally, PresentSmart provides a user-friendly graphical user interface (GUI) implemented using the Tkinter library.
 
 ## Demo Video
