@@ -1,19 +1,21 @@
 import os
 import glob
-from google_images_search import GoogleImagesSearch
+from pexels_api import Client
 
 # setting dev key and cx
-gis = GoogleImagesSearch(os.getenv("GCS_DEVELOPER_KEY"), os.getenv("GCS_CX"))
+# gis = GoogleImagesSearch(os.getenv("GCS_DEVELOPER_KEY"), os.getenv("GCS_CX"))
 
 # function to getcall and download
 def get_images(query, n):
+    client = Client(api_key=os.getenv("PEXELS_API_KEY"))
     _search_params = {
-        'q': query,
-        'num': n,
-        'fileType': 'jpg|gif|png',
+        'query': query,
+        'per_page': n,
     }
     try:
-        gis.search(search_params=_search_params, path_to_dir='./images/')
+        search_results = client.search(query=query, **_search_params)
+        for photo in search_results.photos:
+            photo.download(path='./images/')
         filenames = [f for f in os.listdir('./images/') if os.path.isfile(os.path.join('./images/', f))]
         return filenames
     except Exception as e:
